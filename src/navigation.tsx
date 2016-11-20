@@ -8,7 +8,7 @@ export class Navigation extends React.Component<any, any> {
   return (
     <div>
         <Link to="/">
-          <img src="../../assets/ieee_logo.png"/>
+          <img className="logo" src="../../assets/ieee_logo.png"/>
         </Link>
         <div className="navigation">
           <ul>

@@ -28,10 +28,22 @@ export class Homepage extends React.Component<any, any> {
     }
 
     render() {
+        var green = {
+            color: green
+        };
         return (
-            <div>
-            <Navigation />
-            <h1>{this.props.subPage}</h1>
+            <div className="homepage">
+                <Navigation />
+                <h1>{this.props.subPage}</h1>
+                <div className="homepage__box">
+                    <div className="homepage__box--title">
+                        <h1>UC Berkeley IEEE</h1>
+                    </div>
+                    <div className="homepage__box--content">
+                        <button className="content__button">Join</button>
+                        <button className="content__button">Donate</button>
+                    </div>
+                </div>
             </div>
         );
     }
