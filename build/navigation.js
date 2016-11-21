@@ -49,7 +49,7 @@ System.register(['react', 'react-router'], function(exports_1, context_1) {
                             ), 
                             React.createElement("ul", null, 
                                 React.createElement("li", {className: "main"}, 
-                                    React.createElement(react_router_1.Link, {to: "/decal/about"}, "DECAL")
+                                    React.createElement(react_router_1.Link, {to: "/decal"}, "DECAL")
                                 ), 
                                 React.createElement("li", {className: "option"}, 
                                     React.createElement(react_router_1.Link, {to: "/decal/hope"}, "H.O.P.E")
@@ -64,7 +64,7 @@ System.register(['react', 'react-router'], function(exports_1, context_1) {
                             ), 
                             React.createElement("ul", null, 
                                 React.createElement("li", {className: "main"}, 
-                                    React.createElement(react_router_1.Link, {to: "/donate"}, "Donate")
+                                    React.createElement(react_router_1.Link, {to: "/donate"}, "DONATE")
                                 )
                             ))));
                 };

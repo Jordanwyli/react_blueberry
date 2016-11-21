@@ -1,5 +1,5 @@
 /// <reference path='../typings/index.d.ts'/>
-System.register(['react', 'react-redux'], function(exports_1, context_1) {
+System.register(['react', 'react-redux', './navigation'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __extends = (this && this.__extends) || function (d, b) {
@@ -13,8 +13,8 @@ System.register(['react', 'react-redux'], function(exports_1, context_1) {
         else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
         return c > 3 && r && Object.defineProperty(target, key, r), r;
     };
-    var React, react_redux_1;
-    var Events;
+    var React, react_redux_1, navigation_1;
+    var Dashboard;
     return {
         setters:[
             function (React_1) {
@@ -22,25 +22,28 @@ System.register(['react', 'react-redux'], function(exports_1, context_1) {
             },
             function (react_redux_1_1) {
                 react_redux_1 = react_redux_1_1;
+            },
+            function (navigation_1_1) {
+                navigation_1 = navigation_1_1;
             }],
         execute: function() {
-            Events = (function (_super) {
-                __extends(Events, _super);
-                function Events(props) {
+            Dashboard = (function (_super) {
+                __extends(Dashboard, _super);
+                function Dashboard(props) {
                     _super.call(this, props);
                 }
-                Events.prototype.render = function () {
+                Dashboard.prototype.render = function () {
                     return (React.createElement("div", null, 
-                        React.createElement("h1", null, "Events")
-                    ));
+                        React.createElement(navigation_1.Navigation, null), 
+                        this.props.children));
                 };
-                Events = __decorate([
+                Dashboard = __decorate([
                     react_redux_1.connect(function (state) { return ({}); }, function (dispatch) { return ({}); })
-                ], Events);
-                return Events;
+                ], Dashboard);
+                return Dashboard;
             }(React.Component));
-            exports_1("Events", Events);
+            exports_1("Dashboard", Dashboard);
         }
     }
 });
-//# sourceMappingURL=events.js.map
+//# sourceMappingURL=dashboard.js.map

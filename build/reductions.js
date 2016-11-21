@@ -1,17 +1,73 @@
-System.register([], function(exports_1, context_1) {
+System.register(['immutable'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
-    var nav;
+    var Immutable;
+    var homepageReducer, eventsReducer, industryReducer, decalReducer, aboutReducer, donateReducer, reducer;
     return {
-        setters:[],
+        setters:[
+            function (Immutable_1) {
+                Immutable = Immutable_1;
+            }],
         execute: function() {
-            nav = function (state, action) {
-                var newState = Object.assign({}, state);
-                newState[action.parent] = action.page;
-                return newState;
+            homepageReducer = function (state, action) {
+                switch (action.type) {
+                    default:
+                        return state;
+                }
+            };
+            eventsReducer = function (state, action) {
+                switch (action.type) {
+                    default:
+                        return state;
+                }
+            };
+            industryReducer = function (state, action) {
+                switch (action.type) {
+                    default:
+                        return state;
+                }
+            };
+            decalReducer = function (state, action) {
+                switch (action.type) {
+                    default:
+                        return state;
+                }
+            };
+            aboutReducer = function (state, action) {
+                switch (action.type) {
+                    default:
+                        return state;
+                }
+            };
+            donateReducer = function (state, action) {
+                switch (action.type) {
+                    default:
+                        return state;
+                }
+            };
+            reducer = function (state, action) {
+                return Immutable.Map({
+                    homepage: homepageReducer(state.get("homepage"), action),
+                    events: eventsReducer(state.get("events"), action),
+                    industry: industryReducer(state.get("industry"), action),
+                    decal: decalReducer(state.get("decal"), action),
+                    about: aboutReducer(state.get("about"), action),
+                    donate: donateReducer(state.get("donate"), action)
+                });
+                // let newState = Object.assign({}, state);
+                // newState[action.get("parent")] = action.page;
+                // return newState;
             };
             exports_1("default",{
-                NAV: nav
+                reducer: reducer,
+                defaults: Immutable.Map({
+                    homepage: {},
+                    events: {},
+                    industry: {},
+                    decal: {},
+                    about: {},
+                    donate: {}
+                })
             });
         }
     }

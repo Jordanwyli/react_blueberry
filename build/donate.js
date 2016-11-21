@@ -1,5 +1,5 @@
 /// <reference path='../typings/index.d.ts'/>
-System.register(['react', 'react-redux', './navigation'], function(exports_1, context_1) {
+System.register(['react', 'react-redux'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __extends = (this && this.__extends) || function (d, b) {
@@ -13,7 +13,7 @@ System.register(['react', 'react-redux', './navigation'], function(exports_1, co
         else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
         return c > 3 && r && Object.defineProperty(target, key, r), r;
     };
-    var React, react_redux_1, navigation_1;
+    var React, react_redux_1;
     var Donate;
     return {
         setters:[
@@ -22,9 +22,6 @@ System.register(['react', 'react-redux', './navigation'], function(exports_1, co
             },
             function (react_redux_1_1) {
                 react_redux_1 = react_redux_1_1;
-            },
-            function (navigation_1_1) {
-                navigation_1 = navigation_1_1;
             }],
         execute: function() {
             Donate = (function (_super) {
@@ -32,30 +29,13 @@ System.register(['react', 'react-redux', './navigation'], function(exports_1, co
                 function Donate(props) {
                     _super.call(this, props);
                 }
-                Donate.prototype.componentWillMount = function () {
-                    if (this.props.subPage != "default" && !this.props.params.page)
-                        this.props.nav(this.props.subPage);
-                    else
-                        this.props.nav(this.props.params.page || "default");
-                };
-                Donate.prototype.componentDidUpdate = function () {
-                    if (this.props.subPage != "default" && !this.props.params.page)
-                        this.props.nav(this.props.subPage);
-                    else
-                        this.props.nav(this.props.params.page || "default");
-                };
                 Donate.prototype.render = function () {
                     return (React.createElement("div", null, 
-                        React.createElement(navigation_1.Navigation, null), 
-                        React.createElement("h1", null, this.props.subPage)));
+                        React.createElement("h1", null, "Donate")
+                    ));
                 };
                 Donate = __decorate([
-                    react_redux_1.connect(function (state) { return ({ subPage: state.donate }); }, function (dispatch) { return ({
-                        nav: function (url) {
-                            var action = { type: 'NAV', parent: "donate", page: url };
-                            dispatch(action);
-                        }
-                    }); })
+                    react_redux_1.connect(function (state) { return ({}); }, function (dispatch) { return ({}); })
                 ], Donate);
                 return Donate;
             }(React.Component));
