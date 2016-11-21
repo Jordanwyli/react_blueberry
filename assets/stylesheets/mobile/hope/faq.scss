@@ -1,0 +1,39 @@
+.hope-faq-mobile {
+    padding: 0 5px;
+
+    .heading {
+        text-align: center;
+    }
+
+
+    .panel {
+        margin-bottom: 5px;
+        border: none;
+
+        .panel-heading {
+            text-align: left;
+            border-bottom: 2px ridge #00CCFF;
+            box-shadow: 1px 1px 5px 0px #5599FF;
+
+            &:after {
+                font-family: 'Glyphicons Halflings';
+                color: grey;
+                float: right;
+                content: "\2212";
+            }
+
+            &.collapsed:after {
+                content: "\2b";
+            }
+        }
+
+        .panel-body {
+            padding: 10px;
+            
+            p {
+                text-indent: 30px;
+                padding: 0px 20px;
+            }
+        }
+    }
+}

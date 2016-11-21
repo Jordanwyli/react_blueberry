@@ -1,0 +1,60 @@
+// Place all the styles related to the Hope controller here.
+// They will automatically be included in application.css.
+
+.hope-pic {
+	float: right;
+	padding-top: 50px;
+}
+
+.hope-downloads {
+	float: left;
+	width: 50px;
+}
+
+.hope-downloads#handouts {
+	padding-left: 130px;
+}
+
+.hope-downloads#labs {
+	padding-left: 150px;
+}
+
+#hope-resources {
+  border: 1px solid #CDCDCD;
+
+  .hope-link {
+    height: 40px;
+    width: 150px;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #CDCDCD;
+  }
+
+  .hope-header {
+    color: #2F3337;
+    background-color: #CDCDCD;
+    padding: 15px;
+    border: 1px solid #CDCDCD;
+  }
+}
+
+a.hope-resource {
+	color: #6D7883;
+
+  &:hover {
+    color: #2F3337;
+  }
+}
+
+.email {
+	font-family: 'OpenSansSemibold';
+}
+
+#hope-content {
+	.left {
+		width: 650px;
+	}
+	.right {
+		width: 262px;
+	}
+}

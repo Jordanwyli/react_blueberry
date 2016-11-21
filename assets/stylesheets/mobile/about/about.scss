@@ -1,0 +1,29 @@
+.about-mobile {
+    padding: 0 15px;
+
+    p {
+        text-indent: 30px;
+
+
+    }
+
+    .address {
+      .stamp {
+        width: 30%;
+        background-size: 100% 100%;
+        margin: 0 5%;
+      }
+
+      .text {
+        width: 50%;
+      }
+    }
+
+    tr {
+        border-bottom: 1px ridge #ddddff;
+
+        .row-header {
+            width: 30%;
+        }
+    }
+}

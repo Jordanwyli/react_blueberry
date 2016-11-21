@@ -1,0 +1,418 @@
+// The blue_raspberry theme. Any changes globally affecting
+// blue_raspberry should go in here.
+
+$desired-width:   1280px;
+$minimum-width:   1024px;
+$content-width:   968px;
+
+$header-height:   150px;
+$footer-height:   150px;
+
+$hero-height:     367px;
+
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'OpenSansRegular';
+  font-size: 14px;
+
+  background-color: #FAFAFA;
+  background-image: image-url('bg_container.png');
+  background-repeat: repeat-y;
+  background-position: center;
+}
+
+p {
+  text-align: justify;
+}
+
+.horizontal-line {
+  width: 100%;
+  height: 1px;
+  background-color: #98A1AA;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a.icon-link {
+  display: inline-block;
+  border: 5px solid #98A1AA;
+  background-color: #98A1AA;
+  margin-top: 5px;
+
+  span {
+    font-size: 12px;
+    padding: 0 4px 0 4px;
+    color: white;
+    vertical-align: top;
+  }
+
+  span.icon {
+    font-size: 14px;
+  }
+}
+
+.wrapper {
+  max-width: $desired-width;
+  min-width: $minimum-width;
+  background-color: #FFFFFF;
+
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -1 * $footer-height;
+}
+
+.footer-wrapper, .push {
+  height: $footer-height;
+}
+
+.footer-wrapper {
+  background-color: #2F3337;
+  color: #FFFFFF;
+
+  max-width: $desired-width;
+  min-width: $minimum-width;
+  margin: 0px auto;
+}
+
+@mixin viewable-content {
+  width: $content-width;
+  margin: 0px auto;
+}
+
+.header {
+  @include viewable-content;
+  height: $header-height;
+
+  .logo-cal {
+    width: 287px;
+    height: 122px;
+    float: left;
+
+    img {
+      border: 0px;
+    }
+  }
+
+  .navigation {
+    font-size: 14px;
+    float: right;
+    margin-top: 100px;
+    color: #98A1AA;
+
+    ul {
+      display: block;
+      float: left;
+      padding: 0 20px 0 20px;
+      &:hover {
+          background-color: rgba(255, 255, 255, 0.85);
+      }
+      &:hover li.option {
+        opacity: 1;
+      }
+
+      li.main {
+        font-family: 'OpenSansSemibold';
+        padding-bottom: 20px;
+      }
+
+      li.option {
+        opacity: 0;
+      }
+
+      li {
+        list-style-type: none;
+        padding-bottom: 8px;
+
+        a {
+          text-decoration: none;
+          color: #7B858F;
+        }
+
+        a:hover {
+          color: #2F3337;
+        }
+      }
+    }
+  }
+}
+
+.hero {
+  max-width: $desired-width;
+  min-width: $minimum-width;
+  height: $hero-height;
+
+  background-image: image-url("hero/home.png");
+  background-position: center center;
+}
+
+.submenu {
+  max-width: $desired-width;
+  min-width: $minimum-width;
+  height: 70px;
+  color: #FFFFFF;
+
+  background-color: #7B858F;
+
+  ul {
+    @include viewable-content;
+    list-style-type:none;
+    line-height: 70px;
+    padding: 0px;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    li {
+      float: left;
+      margin-right: 125px;
+      font-size: 18px;
+      font-family: 'OpenSansLight';
+    }
+
+    li.current {
+      background-image: image-url("current.png");
+      background-position: center bottom;
+      background-repeat: no-repeat;
+    }
+
+    li.page {
+      font-size: 24px;
+      margin-right: 0px;
+      float: right;
+      font-family: 'OpenSansSemibold';
+    }
+  }
+}
+
+.content {
+  @include viewable-content;
+  padding: 43px 0 75px 0;
+  overflow: auto;
+
+  .left {
+    width: 570px;
+    float: left;
+  }
+
+  .right {
+    width: 342px;
+    float: right;
+
+    ul {
+      padding-left: 10px;
+
+      li {
+        list-style-type: none;
+        margin-bottom: 15px;
+
+        span, a {
+          color: #6D7883;
+          text-decoration: none;
+          font-size: 18px;
+
+          .blue {
+            color: #1A5298;
+          }
+        }
+        a:hover, span.clickable:hover {
+          color: #2F3337;
+        }
+      }
+    }
+  }
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+
+  tr {
+    padding-bottom: 10px;
+  }
+
+  td {
+    vertical-align: middle;
+  }
+
+  td.row-header {
+    line-height: 30px;
+    font-size: 18px;
+    color: #98A1AA;
+  }
+}
+
+.footer {
+  @include viewable-content;
+  height: $footer-height;
+  font-size: 12px;
+
+  .copyright {
+    float: left;
+    text-align: center;
+
+    .logo-national {
+      width: 128px;
+      height: 37px;
+      margin-bottom: 5px;
+
+      img {
+        border: 0px;
+      }
+    }
+  }
+
+  .media {
+    float: right;
+
+    ul {
+      padding: 0;
+      overflow: hidden;
+
+      li {
+        float: left;
+        list-style-type: none;
+      }
+    }
+
+    .icon {
+      padding-top: 4px;
+      float: left;
+      font-size: 20px;
+      line-height: 30px;
+      margin-left: 8px;
+      text-align: center;
+      width: 34px;
+      background-color: #98A1AA;
+    }
+
+    a {
+      color: white;
+    }
+  }
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+#flash {
+  @mixin message-format($notice_color) {
+    .notice {
+      font-family: 'OpenSansSemibold';
+      color: $notice_color;
+    }
+  }
+
+  border-bottom: 1px solid #98A1AA;
+  padding: 0 0 35px 0;
+  margin-bottom: 35px;
+
+  .flash-notice {
+    @include message-format(#FAA732);
+  }
+
+  .flash-error {
+    @include message-format(#A40800);
+  }
+
+  .flash-alert {
+    @include message-format(#A40800);
+  }
+
+  .flash-success {
+    @include message-format(#00AD4F);
+  }
+
+  ul {
+    color: #2F3337;
+  }
+
+}
+
+span.heading {
+  font-size: 27px;
+}
+
+span.subheading {
+  font-size: 21px;
+}
+
+.blue {
+  color: #1A5298;
+}
+
+.grey {
+  color: #6D7883;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav.pagination {
+  font-family: 'OpenSansRegular';
+  font-size: 14px;
+  text-decoration: none;
+
+  .current {
+    font-style: normal;
+    color: #2F3337;
+    font-family: 'OpenSansSemibold';
+  }
+
+  a {
+    text-decoration: none;
+    color: #7B858F;
+
+    &:hover {
+      color: #2F3337;
+    }
+  }
+
+  .first, .last {
+    display: none;
+  }
+}
+
+#biography {
+  text-align: justify;
+}
+
+.hidden {
+  display: none;
+}
+
+.application-hook {
+  font-size: 16px;
+  color: #7B858F;
+  width: 100%;
+  padding-bottom: 30px;
+  text-align: center;
+
+}
+
+.application-link {
+  color: #1A5298;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.events-filler {
+  margin-top: 20px;
+  font-size: 16px;
+}

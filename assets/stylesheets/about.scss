@@ -1,0 +1,102 @@
+$tile-width:  142px;
+$tile-height: 142px;
+$container-width: $tile-width * 2;
+$grid-width:  4;
+$max-grid-height: 4;
+
+@mixin tile-properties($width: $tile-width) {
+  margin: 0px;
+  width : $width;
+  height: $tile-height;
+  float: left;
+}
+
+#face-grid {
+  display: block;
+  overflow: hidden;
+  background-color: #7B858F;
+  width:  $tile-width * $grid-width;
+
+  .officer-container {
+    width: $container-width;
+    height: $tile-height;
+    float: left;
+    background-color: #E0E0E0;
+
+    &:hover {
+      color: #FFFFFF;
+      background-color: #2F3337;
+    }
+  }
+
+  .tile {
+    @include tile-properties;
+  }
+
+  .salutation {
+    position: relative;
+
+    @mixin align {
+      position: absolute;
+      bottom: 10px;
+    }
+
+    span {
+      display: block;
+    }
+
+    .rank {
+      font-family: 'OpenSansItalic';
+    }
+
+    .left-align {
+      @include align;
+      left: 10px;
+      text-align: left;
+    }
+
+    .right-align {
+      @include align;
+      right: 10px;
+      text-align: right;
+    }
+  }
+}
+
+#face-grid-wrapper {
+  height: $tile-height * $max-grid-height;
+}
+
+.committee-description {
+  padding: 5px 0px 5px 10px;
+}
+
+.address {
+  overflow: hidden;
+
+  .stamp {
+    float: left;
+    width: 90px;
+    height: 110px;
+    background-image: image-url('stamp.png');
+  }
+
+  .text {
+    float: left;
+    height: 110px;
+    vertical-align: middle;
+    margin-left: 20px;
+  }
+}
+
+#advisor-link, #nationals-link, #constitution-link {
+  text-decoration: none;
+}
+
+.officer-lightbox {
+  padding: 30px;
+}
+
+.lightbox-face {
+  padding: 10px 10px 10px 0px;
+}

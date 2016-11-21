@@ -1,0 +1,49 @@
+.fc-state-highlight {
+    background-color:#E5E5E5;
+}
+.fc-event-skin, .fc-event {
+    text-shadow: none;
+    border-color: transparent;
+    background-color:transparent;
+    color:#3A6BA6;
+}
+.fc-event-time {
+    font-weight : bold;
+}
+.fc-day-number {
+    font-style : italic;
+
+}
+.fc-past-event, .fc-past-day {
+    color : #838383 !important;
+}
+.fc-event-inner{
+    white-space : nowrap;
+     width : 100%;
+     overflow : hidden;              /* "overflow" value must be different from "visible" */
+    text-overflow : ellipsis;
+}
+
+.fc-header-center, .fc-header-right, .fc-header-left, .fc-day-header {
+    background-color: #D6D6D6;
+    color: #333333;
+    height: 40px;
+}
+.fc-header {
+    height: 100px;
+}
+
+.fc-header-title, .fc-button {
+    margin-top: 40px;
+}
+
+.fc-widget-header, .fc-widget-content {
+    border: 1px solid #D6D6D6;
+}
+.fc-day-header {
+    font-weight: 300;
+}
+.fc-button-prev {
+    margin-left: 45px;
+    margin-bottom: 100px;
+}

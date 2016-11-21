@@ -1,0 +1,75 @@
+// This stylesheet is strictly for styling posts appearing
+// on the homepage and events page.
+
+.event {
+  display: block;
+  overflow: auto;
+  margin-top: 50px;
+
+  span {
+    display: block;
+  }
+
+  span.icon {
+    display: inline;
+    color: #7B858F;
+    margin-right: 10px;
+  }
+
+  .date {
+    width: 75px;
+    height: 75px;
+    text-align: center;
+    color: #FFFFFF;
+    float: left;
+
+    background-image: image-url("date.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    span.number {
+      font-family: 'OpenSansItalic';
+      font-size: 36px;
+      padding-top: 5px;
+    }
+
+    span.month {
+      margin-top: -7px;
+      font-size: 14px;
+    }
+  }
+
+  .www {
+    float: left;
+    width: 400px;
+    margin-left: 48px;
+
+    span {
+      margin-bottom: 15px;
+    }
+
+    .event-title {
+      font-size: 24px;
+      color: black;
+      text-decoration: none;
+    }
+
+    span.event-location, span.event-time {
+      font-size: 18px;
+      margin-left: 10px;
+    }
+  }
+
+  .event-past {
+    color: grey;
+
+    .event-title {
+      color: grey;
+    }
+  }
+}
+
+.event-pagination {
+  float: left;
+  margin: 48px 0px 0px 123px; /* 123 = 75 + 48 */
+}

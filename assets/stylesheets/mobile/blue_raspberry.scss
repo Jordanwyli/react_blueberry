@@ -1,0 +1,354 @@
+// MOBILE PAGE THEME
+// The blue_raspberry mobile theme. Any changes globally affecting the mobile
+//  blue_raspberry should go in here.
+// BE SURE TO CHECK YOU DID NOT CHANGE ANY OTHER PAGE'S CSS!!!
+//  (best way to do this is to just add "mobile" to all the classes)
+
+$desired-width:   100%;
+$minimum-width:   100%;
+$content-width:   100%;
+
+$header-height:   68px;
+$footer-height:   175px;
+
+$hero-height:     200px;
+
+$main-color: #225897;
+
+@mixin viewable-content {
+  width: $content-width;
+  margin: 0 auto 10px auto;
+}
+
+.header-wrapper-mobile {
+    padding: 10px 0;
+
+    .header {
+        @include viewable-content;
+        height: $header-height;
+        padding: 0 10px;
+
+        .logo-cal {
+            width: auto;
+            height: auto;
+            float: left;
+        }
+
+        img {
+            border: 0px;
+            height: $header-height;
+        }
+
+        .page-title {
+            float: left;
+            text-align: center;
+            font-size: 18pt;
+            padding: 10px 20px;
+        }
+
+        #drawer-toggle {
+            display: none;
+
+            &:checked ~ .hamburger {
+                background: rgba(255, 255, 255, .8);
+                right: 80%;
+                height: 100%;
+                position: fixed;
+            }
+
+            &:checked ~ .drawer {
+                right: 0;
+                //outline: 2px inset black;
+            }
+        }
+
+        .hamburger {
+          -webkit-user-select: none;
+          -khtml-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          z-index: 1;
+          position: absolute;
+          right: 0;
+          left: 0;
+          top: 0;
+          text-align: right;
+          height: 0;
+        }
+
+        .drawer {
+            position: fixed;
+            top: 0;
+            right: -80%;
+            height: 100%;
+            width: 80%;
+            background: $main-color;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            color: white;
+            z-index: 1;
+            //box-shadow: 20px 0px 60px -30px white inset, 3px 0px 0px 0px black inset;
+
+            #drawer-menu {
+                color: white;
+                padding-top: 15px;
+                padding-left: 15px;
+
+                .panel {
+                    border: none;
+                    background: $main-color;
+                    //border-bottom: 1px solid whitesmoke;
+                    border-radius: 0;
+                    box-shadow: none;
+                    margin-top: 10px;
+
+                    .panel-heading {
+                        background: none;
+                        color: white;
+                        padding: 20px 0 0 10px;
+
+                        .panel-title {
+                            font-size: 18pt;
+                        }
+                    }
+
+                    .panel-body {
+                        border: none;
+                        padding: 10px 0;
+
+                        ul {
+                            list-style-type: none;
+                            font-size: 14pt;
+
+                            .option {
+                                padding:  0 0 10px 0px;
+                            }
+                        }
+                    }
+
+                    a {
+                        text-decoration: none;
+                        display:inline-block;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .hero-mobile {
+      width: 100%;
+      height: $hero-height;
+
+      background-image: image-url("hero/home.png");
+      background-position: center center;
+    }
+
+    .submenu-mobile {
+      width: 100%;
+      height: 50px;
+      color: #000000;
+      background-color: #7B858F;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      white-space: nowrap;
+
+      ul {
+        // @include viewable-content;
+        list-style-type:none;
+        line-height: 40px;
+        padding: 0;
+        margin: 0;
+        width: intrinsic;
+        width: -moz-max-content;
+        width: -webkit-max-content;
+        display:inline-block;
+
+
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+
+        li {
+          height: 50px;
+          float: left;
+          margin: 0 15px;
+          font-size: 18px;
+          font-family: 'OpenSansLight';
+          display: inline-block;
+          white-space: nowrap;
+        }
+
+        li.current {
+          background-image: image-url("current.png");
+          background-position: center bottom;
+          background-repeat: no-repeat;
+          font-weight: bolder;
+          font-size: 22px;
+        }
+      }
+    }
+}
+
+.wrapper-mobile {
+  max-width: $desired-width;
+  min-width: $minimum-width;
+  background-color: #FFFFFF;
+
+  min-height: 100%;
+  height: auto !important;
+  margin: 0 auto -1 * $footer-height;
+
+  p {
+    text-align: left;
+  }
+
+    .content {
+      @include viewable-content;
+      padding: 0 0 15px 0;
+      overflow: auto;
+
+      .heading {
+          text-align: center;
+          font-size: 36px;
+          margin: 20px;
+      }
+
+      .left {
+        width: 100%;
+        float: left;
+      }
+
+      .right {
+        width: 100%;
+        float: right;
+
+        ul {
+          padding-left: 10px;
+
+          li {
+            list-style-type: none;
+            margin-bottom: 15px;
+
+            span, a {
+              color: #6D7883;
+              text-decoration: none;
+              font-size: 18px;
+
+              .blue {
+                color: #1A5298;
+              }
+            }
+            a:hover, span.clickable:hover {
+              color: #2F3337;
+            }
+          }
+        }
+      }
+    }
+}
+
+.push {
+  height: $footer-height;
+}
+
+.footer-wrapper-mobile {
+  height: $footer-height;
+  background-color: #2F3337;
+  color: #FFFFFF;
+
+  max-width: $desired-width;
+  min-width: $minimum-width;
+  margin: 0px auto;
+
+  .footer {
+      @include viewable-content;
+      height: $footer-height;
+      font-size: 16px;
+      padding: 15px 10px;
+
+      .copyright {
+        float: left;
+        width: 50%;
+        height: 60%;
+        padding-left: 10px;
+
+        .logo-national {
+          margin: auto;
+          margin-bottom: 5px;
+
+          img {
+            width: 100%;
+            height: 100%;
+            border: 0px;
+          }
+        }
+
+        p {
+          text-align: center;
+        }
+      }
+
+      .social-media {
+        float: right;
+        height: 60%;
+
+        ul {
+          padding: 5px 10px 0px 0px;
+          margin: 0;
+          overflow: hidden;
+
+          li {
+            float: left;
+            list-style-type: none;
+            margin-left: 10px;
+          }
+        }
+
+        .icon {
+          padding-top: 5px;
+          float: left;
+          font-size: 37px;
+          text-align: center;
+          width: 60px;
+          background-color: #98A1AA;
+        }
+
+        a {
+          color: white;
+        }
+      }
+
+      .email-in {
+        width: 100%;
+        padding-top: 23%;
+
+        .input-append {
+            width: 100%;
+            margin: 0;
+            padding-left: 10px;
+        }
+
+        input {
+            display: inline-block;
+            width: 85%;
+            height: 45px;
+            border-radius: 0;
+        }
+
+        button {
+            width: 11%;
+            height: 45px;
+        }
+      }
+    }
+}
+
+* {
+  /* adds animation for all transitions */
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}

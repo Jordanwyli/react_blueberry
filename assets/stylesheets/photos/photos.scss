@@ -1,0 +1,77 @@
+// Place all the styles related to the Photos controller here.
+// They will automatically be included in application.css.
+
+@import "colorbox";
+@import "royalslider";
+@import "rs-default";
+
+.album-cover {
+  margin: 0 30px 30px 0;
+  display: inline-block;
+}
+
+.album-cover-last {
+  margin-right: 0px;
+}
+
+.album-book {
+  display: block;
+  text-align: center;
+
+  .album {
+    width: 150px;
+    display: inline-block;
+    padding: 20px;
+    margin-right: 50px;
+
+    &:hover {
+      background-color: #EEEEEE;
+    }
+
+    .album-info {
+      width: 150px;
+
+      span {
+        padding: 5px 0 5px 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
+      }
+
+      .date {
+        font-family: 'OpenSansItalic';
+        font-size: 12px;
+        color: #7B858F;
+      }
+    }
+
+    .photo-count {
+      display: block;
+      margin-top: 10px;
+      padding-left: 10px;
+      border-width: 0 0 0 16px;
+      border-style: solid;
+      border-color: #7B858F;
+
+      font-size: 12px;
+      color:  #7B858F;
+      text-align: left;
+    }
+  }
+
+  .album-last {
+    margin-right: 0px;
+  }
+}
+
+#gallery {
+  overflow: hidden;
+}
+
+#colorbox:focus {
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
