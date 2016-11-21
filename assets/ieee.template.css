@@ -1,23 +1,45 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  position: relative;
+  padding: 0;
+  background: none;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  font-family: 'OpenSansSemibold';
+  box-sizing: border-box;
+}
+
 .wrapper {
-    max-width: 1280px;
     min-width: 1024px;
     background-color: #FFFFFF;
     min-height: 100%;
     height: auto !important;
     height: 100%;
-    margin: 0 auto -150px;
+    background-image: url('skyline.jpg');
 }
 
 .header {
-    width: 968px;
-    margin: 0px auto;
-    height: 150px;
+    width: 100%;
+    margin: 0 auto;
+    height: 100px;
+    background-color:white;
+    opacity: 0.98;
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
 }
 
 .header .navigation {
     font-size: 14px;
     float: right;
-    margin-top: 100px;
     color: #98A1AA;
 }
 
@@ -28,7 +50,6 @@
 }
 
 .header .navigation ul li.main {
-    font-family: 'OpenSansSemibold';
     padding-bottom: 20px;
 }
 
@@ -38,4 +59,53 @@
 
 .header .navigation ul:hover li.option{
   opacity: 100;
+}
+
+.logo {
+    padding: 10px;
+    height: 100%;
+}
+
+.homepage__box {
+    position: fixed;
+    bottom: 10%;
+    right: 10%;
+    width: 400px;
+    height: 200px;
+    background-color: white;
+    opacity: 0.85;
+    border-radius: 2px;
+}
+
+.homepage__box--title {
+    opacity: 1;
+    text-align: center;
+    padding: 0px 10px;
+    margin-bottom: 30px;
+}
+
+.homepage__box--content {
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    text-decoration: none;
+}
+
+.homepage__box--content .content__button {
+    border: none;
+    background-color: #255994;
+    color: white;
+    font-size: 24px;
+    width: 35%;
+    height: 30%;
+    margin: 10px;
+}
+
+.content__button:hover {
+    background: white;
+    color: #255994;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 2px;
+    transition: all 200ms;
 }
